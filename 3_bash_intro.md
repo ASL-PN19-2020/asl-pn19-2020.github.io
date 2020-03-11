@@ -7,7 +7,7 @@
     *  `apropos slowo_klucz`
     *  `command --help` lub `command -h`
     
-1.  System plików
+2.  System plików
 
     *  `cd sciezka_bezwzględna` (zaczyna się od `/`) lub `cd sciezka_wzgledna` (względem bieżącego katalogu) - zmiana katalogu
     *  `ls` - wyświetlanie zawartości katalogu:
@@ -26,19 +26,19 @@
     *  `stat` - informacje o statusie pliku
     *  `file` - informacja o typie pliku
   
-1.  Drukowanie w konsoli
+3.  Drukowanie w konsoli
 
     *  `cat`, `more`, `less` - wyświetlanie zawartości plików
     *  `tail` - wyświetla *ogon* pliku (końcówka)
     *  `head` - wyświetla *głowę* pliku (początek)
    
-1.  Monitorowanie i zarządzanie procesami
+4.  Monitorowanie i zarządzanie procesami
   
     *  `ps` - lista procesów
     *  `top` - wyświetla informacje o procesach w czasie rzeczywistym
     *  `kill` - wysyła sygnał do programu (patrz manual)
   
-1.  Media
+5.  Media
 
     *  `mount` - montowanie urządzeń
     *  `umount` - odmontowanie urządzeń
