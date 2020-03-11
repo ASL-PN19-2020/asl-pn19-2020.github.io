@@ -1,4 +1,4 @@
-## Skróty klawiszowe w terminalu:
+## Skroty klawiszowe w terminalu:
 
 *  `ctrl+C` - *interrupt* (SIGINT)
 *  `ctrl+Z` - *suspend* (SIGTSTP) -> `bg`, `fg` aby przywrócić działanie
