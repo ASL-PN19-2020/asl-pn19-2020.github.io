@@ -1,4 +1,8 @@
 theme: jekyll-theme-minimal
 
+name: Administrowanie Systemami Linux - Poniedziałek 18:55 - Lato 2019/2020
+author: Piotr Zieliński
+description: Laboratorium
+
 url: http://PiotrJZielinski.github.io/linux-pn19-2020
 enforce_ssl: https://PiotrJZielinski.github.io/linux-pn19-2020
