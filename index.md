@@ -5,13 +5,13 @@ Strona zawiera materiały do zajęć. W razie pytań zachęcam do kontaktu mailo
 
 #### Dokumenty:
 
-[Karta przedmiotu - 15 godzin wykładu](docs/15h.pdf)
-
-[Karta przedmiotu - 30 godzin wykładu](docs/30h.pdf)
+[Karta przedmiotu - 15 godzin wykładu](docs/15h.pdf)  |  [Karta przedmiotu - 30 godzin wykładu](docs/30h.pdf)
 
 [Regulamin laboratorium WIZ](docs/regulamin.pdf)
 
 [Program laboratorium](0_lab.md)
+
+Konsultacje: pok. 441 / bud. A1 (poniedziałki 15.30 - 16.30). **Proszę o wcześniejszego maila!**
 
 #### Materiały do zajęć:
 
