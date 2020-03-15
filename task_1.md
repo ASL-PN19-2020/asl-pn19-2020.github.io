@@ -27,3 +27,6 @@ Konsola tekstowa: komendy i skrypty
      *  [13. Pętla `for`](http://linuxcommand.org/lc3_wss0130.php)
      *  [14. Błędy i sygnały 1](http://linuxcommand.org/lc3_wss0140.php)
      *  [15. Błędy i sygnały 2](http://linuxcommand.org/lc3_wss0150.php)
+ 
+ *  [Shell Scripting Tutorial](https://www.shellscript.sh/)
+ *  [Bash Scritping Cheatsheet](https://devhints.io/bash)
