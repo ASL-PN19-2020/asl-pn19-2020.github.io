@@ -18,3 +18,9 @@ Konsultacje: pok. 441 / bud. A1 (poniedziałki 15.30 - 16.30). **Proszę o wcze�
 1. [Instalacja systemu Debian](1_installation.md)
 2. [Skróty klawiszowe w terminalu](2_shortcuts.md)
 3. [Wprowadzenie do Basha](3_bash_intro.md)
+
+------
+
+#### Materiały i zadania
+
+1. 16.03.2020: [Konsola tekstowa: komendy i skrypty](tasks_1.md)
