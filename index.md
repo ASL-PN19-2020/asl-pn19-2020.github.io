@@ -23,4 +23,4 @@ Konsultacje: pok. 441 / bud. A1 (poniedziałki 15.30 - 16.30). **Proszę o wcze�
 
 #### Zadania do wykonania
 
-1. 16.03.2020: [Konsola tekstowa: komendy i skrypty](tasks_1.md)
+1. 16.03.2020: [Konsola tekstowa: komendy i skrypty](task_1.md)
