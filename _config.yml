@@ -1,9 +1,9 @@
 theme: jekyll-theme-minimal
 
 description: Poniedziałek 18:55 - Lato 2019/2020
-baseurl: "/"
-url: http://piotrjzielinski.github.io/linux-pwr
-enforce_ssl: https://piotrjzielinski.github.io/linux-pwr
+baseurl: "/linux-pwr"
+url: https://piotrjzielinski.github.io
+enforce_ssl: piotrjzielinski.github.io
 
 github:
   is_project_page: false
