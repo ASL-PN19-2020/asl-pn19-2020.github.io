@@ -5,13 +5,14 @@
    *  `info command` <- może nie być zainstalowane
    *  `apropos slowo_klucz`
    *  `command --help` lub `command -h`
+   *  `which executable` wskazuje lokalizację danego pliku wykonywalnego
     
 2. System plików
    *  `cd sciezka_bezwzględna` (zaczyna się od `/`) lub `cd sciezka_wzgledna` (względem bieżącego katalogu) - zmiana katalogu
    *  `ls` - wyświetlanie zawartości katalogu:
       *  `ls -a` - wyświetla pliki ukryte
       *  `ls -l` - *długi listing* (dokładniejsze informacje)
-      *  **filtrowanie**:
+      *  **filtrowanie i ekspansja** [[więcej tutaj]](http://linuxcommand.org/lc3_lts0080.php):
          *  `ls nazwa` - wyświetli jeden plik `nazwa`
          *  `ls nazw?` - wyświetli wszystkie pliki zawierające w nazwie `nazw` oraz jeden znak
          *  `ls naz*` - wyświetli wszystkie pliki o nazwie zaczynającej się od `naz`
@@ -24,10 +25,15 @@
    *  `stat` - informacje o statusie pliku
    *  `file` - informacja o typie pliku
   
-3. Drukowanie w konsoli
+3. Drukowanie w konsoli oraz filtry
    *  `cat`, `more`, `less` - wyświetlanie zawartości plików
    *  `tail` - wyświetla *ogon* pliku (końcówka)
    *  `head` - wyświetla *głowę* pliku (początek)
+   *  `sort` - sortuje wejście
+   *  `uniq` - usuwa duplikaty
+   *  `grep` - szuka wzorców (sekwencji znaków) w wejściu
+   *  `fmt` - formatuje tekst
+   *  `echo` - zwraca tekst jako wyjście standardowe
 
 4. Monitorowanie i zarządzanie procesami  
    *  `ps` - lista procesów
@@ -39,5 +45,21 @@
    *  `umount` - odmontowanie urządzeń
    *  `df -h` - uzyskanie informacji o wolnym miejscu na dysku
    *  `du` - obszar pamięci zajęty przez katalog
+   
+6. Przekierowanie I/O
+   *  `command > file` powoduje przekierowanie wyjścia standardowego `command_1` i nadpisanie pliku `file` (zamiast wyświetlać na ekranie)
+   *  `command >> file` jw., lecz dopisuje na końcu
+   *  `command < file` powoduje przekierowanie pliku do `command` jako standardowe wejście
+   *  `command_1 | command_2` - pipeline (przekierowanie wyjścia `command_1` jako wejście `command_2`
+   *  `command_2 $(command_1)` - powoduje wywołanie polecenia `command_1` i podanie go jako argumentu polecenia `command_2`
+   *  alternatywnie można użyć ``command_2 `command_1` ``
+   *  do anulowania działania znaków specjalnych używamy cudzysłowia `" "`, apostrofu `' '` lub ukośnika wstecznego `\`
+   
+7. Uprawnienia w Linuksie [[link]](http://linuxcommand.org/lc3_lts0090.php)
+   *  `chmod` - zmiana uprawnień danego pliku
+   *  `su` - przejście do konta superużytkownika (*superuser*)
+   *  `sudo` - wykonanie jednej komendy jako superużytkownik
+   *  `chown` - zmiana własności pliku/katalogu
+   *  `chgrp` - zmiana własności pliku/katalogu dla grup
    
 ----
