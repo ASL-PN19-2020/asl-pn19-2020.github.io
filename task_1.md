@@ -3,6 +3,48 @@ Konsola tekstowa: komendy i skrypty
 
 ## Zadania:
 
+1. Napisz skrypt, który sprawdzi bieżącą godzinę (polecenie `date`) i, jeżeli wypada ona pomiędzy 15:00 a 17:00 wyświetli komunikat `"Tea time!"`.
+
+2. Utwórz plik tekstowy zawierający 5 powitań w kolejnych linijkach. Następnie napisz skrypt, który wyświetli losowe powitanie z pliku tekstowego. Wykorzystaj polecenie `shuf` oraz `head` lub `tail`.
+
+3. Utwórz skrypt, który utworzy w danym folderze następującą strukturę katalogów, wraz z pustymi plikami:
+```
+.
+project
+│   README.md
+│   script.sh    
+│
+└───data
+│   │   example1.txt
+│   │   example2.txt
+│   │
+│   └───labels
+│       │   labels_big.txt
+│       │   labels_small.txt
+│   
+└───config
+    │   db_config.ini
+    │   sys_config.ini
+```
+
+4. Przgotuj skrypt, którego zadaniem będzie stworzenie katalogów według listy w pliku - np. w postaci:
+```
+katalog
+folder
+biblioteka
+magazyn
+nic
+nieotwierac
+```
+Wykorzystaj dwie metody: przez przekierowanie STDOUT `cat` oraz podając nazwę pliku jako argument skryptu. 
+
+5. Zmodyfikuj powyższy skrypt tak, aby w każdym pliku tworzył zadaną liczbę pustych plików o nazwie `text_n.txt` (`n` - identyfikator pliku, np. `text_1.txt`, `text_2.txt`). Liczba plików ma być podawana jako argument skryptu.
+
+6. Napisz skrypt, który zapyta użytkownika o ścieżkę, a następnie sprawdzi, czy ścieżka prowadzi do katalogu, do zwykłego pliku czy do innego rodzaju pliku i wyświetli stosowny komunikat. Wyświetl informacje nt. obiektu pod ścieżką używając długiego listingu, a jeżeli jest to plik - polecenia `file`.
+
+7. Napisz skrypt, który przejdzie do zadanego katalogu (podanego jako pierwszy argument), a następnie zamieni wszystkie rozszerzenie plików w tym katalogu o zadanym rozszerzeniu (drugi argument) na inne (trzeci argument). Np. wywołanie `./change_ext ~/Documents .txt .md` zamieni wszystkie pliki `.txt` w katalogu `~/Documents` na `.md`.
+
+
 
 ## Literatura:
   *  **The Linux Command**: [Rozdział 1 - polecenia w Bashu](http://linuxcommand.org/lc3_learning_the_shell.php)
