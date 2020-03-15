@@ -69,7 +69,16 @@
 8. Zmienne
    *  `variable=1` - zmienna lokalna
    *  `export VARIABLE=1` - zmienna globalna (widoczna w podprocesach)
+   *  `unset variable` - usuwa zmienną lokalną
    * do tworzenia zmiennych można wykorzystać przekierowanie I/O oraz metody wywoływania poleceń (`$()`, `` ` ` ``)
    * aby użyć zmiennej dodajemy znak `$` (np. `echo $var`)
    
 ----
+
+Do edycji tekstu w Debianie możemy użyć **gedit** (edytor tekstu w DE Gnome - graficzny) lub **nano** (edytor w konsoli).
+
+*  **shebang**: `#!/bin/bash` (wskazuje, jakiego programu należy użyć do wykonania skryptu)
+*  Uprawnienia: `chmod 755 script.sh` lub `chmod +x script.sh` (odczyt, zapis, wykonywanie)
+*  Uruchomienie: `./script` (wymaga nadania uprawnień) lub 
+*  Rozdział w książce na ten temat: [[link]](http://linuxcommand.org/lc3_writing_shell_scripts.php)
+*  Inne źródło informacji: [[link]](https://www.shellscript.sh/)
