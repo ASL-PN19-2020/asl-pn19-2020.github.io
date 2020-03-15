@@ -50,6 +50,10 @@
    *  `command > file` powoduje przekierowanie wyjścia standardowego `command_1` i nadpisanie pliku `file` (zamiast wyświetlać na ekranie)
    *  `command >> file` jw., lecz dopisuje na końcu
    *  `command < file` powoduje przekierowanie pliku do `command` jako standardowe wejście
+   *  `2>`, `2>>` - wyjście standardowe dla błędów
+   *  `2>&1` przekierowuje standardowe wyjście błędów na wejście standardowe
+   *  `1>&2` przekierowuje wyjście standardowe na standardowe wyjście błędów
+   *  `command > /dev/null` - przekierowanie wyjścia standardowego do wirtualnego urządzenia (usunięcie)
    *  `command_1 | command_2` - pipeline (przekierowanie wyjścia `command_1` jako wejście `command_2`
    *  `command_2 $(command_1)` - powoduje wywołanie polecenia `command_1` i podanie go jako argumentu polecenia `command_2`
    *  alternatywnie można użyć ``command_2 `command_1` ``
@@ -61,5 +65,11 @@
    *  `sudo` - wykonanie jednej komendy jako superużytkownik
    *  `chown` - zmiana własności pliku/katalogu
    *  `chgrp` - zmiana własności pliku/katalogu dla grup
+   
+8. Zmienne
+   *  `variable=1` - zmienna lokalna
+   *  `export VARIABLE=1` - zmienna globalna (widoczna w podprocesach)
+   * do tworzenia zmiennych można wykorzystać przekierowanie I/O oraz metody wywoływania poleceń (`$()`, `` ` ` ``)
+   * aby użyć zmiennej dodajemy znak `$` (np. `echo $var`)
    
 ----
