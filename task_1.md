@@ -11,6 +11,7 @@ Konsola tekstowa: komendy i skrypty
      *  [8. (ekspansja zmiennych)](http://linuxcommand.org/lc3_lts0080.php),
      *  [9. (uprawnienia)](http://linuxcommand.org/lc3_lts0090.php),
      *  [10. (kontrola zadań)](http://linuxcommand.org/lc3_lts0100.php).
+     
      Większość poleceń została zgromadzona we [Wprowadzeniu do Basha](3_bash_intro.md)
   
      **The Linux Command**: [Rozdział 4 - skrypty w Bashu](http://linuxcommand.org/lc3_writing_shell_scripts.php)
