@@ -44,6 +44,8 @@ Wykorzystaj dwie metody: przez przekierowanie STDOUT `cat` oraz podając nazwę 
 
 7. Napisz skrypt, który przejdzie do zadanego katalogu (podanego jako pierwszy argument), a następnie zamieni wszystkie rozszerzenie plików w tym katalogu o zadanym rozszerzeniu (drugi argument) na inne (trzeci argument). Np. wywołanie `./change_ext ~/Documents .txt .md` zamieni wszystkie pliki `.txt` w katalogu `~/Documents` na `.md`.
 
+8. Stwórz skrypt, który przyjmuje liczbę od użytkownika i wylicza dla niej ciąg Fibonacciego (definicja rekursywna).
+
 
 
 ## Literatura:
