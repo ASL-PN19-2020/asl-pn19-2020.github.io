@@ -52,7 +52,7 @@ Zarządzanie dyskami i systemem plikowym
 8. ACL
    -  Za pomocą `tune2fs` sprawdź czy ACL jest włączony (podpowiedź: infrmacja na ten temat znajduje się w linii `"Default mount options"`). Spróbuj użyć `grep` by wybrać tylko potrzebną linię.
    -  Jako root stwórz plik z prawem do  odczytu dla innych użytkowników, a następnie za pomocą `setfacl` odbierz użytkownikowi `user1` możliwość odczytu. Sprawdź prawa do pliku używając długiego listingu i `getfacl`.
-   -  Zaloguj się na użytkownika `user1` i spróbuj odczytać plik, to samo powtórzyć dla użytkownika `user2`.
+   -  Zaloguj się na użytkownika `user1` i spróbuj odczytać plik, to samo powtórz dla użytkownika `user2`.
    -  Jako `user1` utwórz katalog `aclDir` i nadaj mu uprawnienia 744. Wykorzystując ACL nadaj grupie `user2` dodatkowo prawo do zapisu w tym katalogu. Czy `user2` będzie mógł stworzyć plik w tym folderze?
 
 
