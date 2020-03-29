@@ -45,7 +45,7 @@ Zarządzanie kontami użytkowników
     └───Videos
     ```
 
-   Użyj skryptu do utworzenia kont jak w zad. 2.
+    Użyj skryptu do utworzenia kont jak w zad. 2.
    
 10.  Zastosuj polecenie `chage` dla konta `developer`, by wymusić zmianę hasła przy następnym logowaniu. Spróbuj zalogować się na to konto, używając `su - developer` by sprawdzić, czy wymuszona została zmiana hasła.
 
