@@ -6,7 +6,6 @@ Przeprowadzanie kompresji danych. Wykonywanie kopii zapasowej i odzyskiwanie dan
 ## Zadania:
 
 1. Utwórz nowe konto `user`. Korzystając z materiałów na wykładzie zainstaluj narzędzie `quota`. Ustaw w pliku `/etc/fstab` niezbędne opcje, które umożliwią uruchomienie `quota` dla partycji systemowej (partycji *root*, zamontowanej w `/`). Uruchom ponownie system (maszynę wirtualną) i włącz program `quota` (`quotacheck`, `quotaon`).
-
    -  sprawdź aktualnie ustawiony limit dla użytkownika `user`, sprawdź ile limitu aktualnie wykorzystuje.
    -  ustaw dla użytkownika `user` limit twardy 30 MB oraz limit miękki 20 MB.
    -  używając polecenia `base64 /dev/urandom | head -c 1M > file.txt` utwórz kilka plików (`1M` oznacza, że każdy z nich ma rozmiar 1 MB) tak, aby przekroczyć limit miękki. Sprawdź co się stanie, gdy `user` przekroczy limit twardy.
@@ -25,12 +24,11 @@ Przeprowadzanie kompresji danych. Wykonywanie kopii zapasowej i odzyskiwanie dan
 7. Z powyższego archiwum wypakuj tylko jeden wybrany przez siebie plik. Podaj użytą komendę.
 
 8. Zainstaluj program `at` (`apt-get install at`).
-
-  - Korzystając z polecenia `at` zaplanuj utworzenie pustego pliku `created_by_at` w katalogu `~/at_testing`.
-  - Zaplanuj w ten sposób dodatkowe 2 zadania (podając inne nazwy plików).
-  - Sprawdź kolejkę zaplanowanych zadań. Usuń jedno z nich i sprawdź kolejkę ponownie, czy zostało ono usunięte.
-  - Zaplanuj utworzenie pliku `dobranocka.txt` na najbliższy wtorek o 19.05 (7.05 PM).
-  - Zaplanuj zadanie, które zostanie wykonane za 10 minut od chwili, w której wydasz polecenie jego wykonania.
+   - Korzystając z polecenia `at` zaplanuj utworzenie pustego pliku `created_by_at` w katalogu `~/at_testing`.
+   - Zaplanuj w ten sposób dodatkowe 2 zadania (podając inne nazwy plików).
+   - Sprawdź kolejkę zaplanowanych zadań. Usuń jedno z nich i sprawdź kolejkę ponownie, czy zostało ono usunięte.
+   - Zaplanuj utworzenie pliku `dobranocka.txt` na najbliższy wtorek o 19.05 (7.05 PM).
+   - Zaplanuj zadanie, które zostanie wykonane za 10 minut od chwili, w której wydasz polecenie jego wykonania.
 
 9. Używając `cron` stwórz prywatny harmonogram, który codziennie o północy wykona kopię zapasową folderu `~/Documents` w folderze `~/backup`, wykorzystując polecenie `rsync`. Zaplanuj drugą akcję, która co godzinę doda do pliku `"~/test.txt"` tekst "Wykonano!". Pokaż wyjście wykonania `crontab -l`. Jeśli wywołanie obu zadań zapiszesz w postaci skryptów, pokaż ich zawartość.
 
