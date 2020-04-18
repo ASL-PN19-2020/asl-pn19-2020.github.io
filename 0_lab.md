@@ -10,15 +10,13 @@
    |  4. | Praktyczne zarządzanie kontami oraz grupami użytkowników                                          | 23.03.2020 |
    |  5. | Praktyczne zarządzanie dyskami i systemem plikowym                                                | 30.03.2020 |
    |  6. | Przeprowadzanie kompresji danych. Wykonywanie kopii zapasowej i odzyskiwanie danych. Harmonogramowanie operacji | 06.04.2020 |
-   |  7. | Aktualizacja systemu, instalacja, aktualizacja i deinstalacja dodatkowego oprogramowania z wykorzystaniem pakietów instalacyjnych i repozytoriów oprogramowania. | 20.04.2020 |
-   |  8. |  Konfigurowanie drukowania w środowisku Linux. Środowisko graficzne - X Window                  | 27.04.2020 |
-   |  9. | Zarządzanie połączeniami sieciowymi. Routing                                                      | 04.05.2020 |
-   | 10. | Zapory sieciowe (firewall) i sterowanie ruchem sieciowym                                          | 11.05.2020 |
-   | 11. | Konfiguracja i zarządzanie serwerami DHCP i DNS                                                   | 18.05.2020 |
-   | 12. | Konfiguracja i zarządzanie serwerem plików (NFS, Samba, FTP)                                      | 25.05.2020 |
-   | 13. | Konfiguracja i zarządzanie serwerem WWW. Systemy zarządzania treścią (CMS)                        | 01.06.2020 |
-   | 14. | Konfigurowanie i uruchamianie maszyn wirtualnych w systemach Linux. Zabezpieczanie serwera. Zdalne administrowanie systemem | 08.06.2020 |
-   | 15. | **Test praktyczny – Zarządzanie infrastrukturą i usługami sieciowymi**                            | 15.06.2020 |
+   |  7. | Aktualizacja systemu, instalacja, aktualizacja i deinstalacja dodatkowego oprogramowania z wykorzystaniem pakietów instalacyjnych i repozytoriów oprogramowania. Konfigurowanie drukowania w środowisku Linux. Środowisko graficzne - X Window | 20.04.2020 |
+   |  8. | Zarządzanie połączeniami sieciowymi. Routing                   | 27.04.2020 |
+   |  9. | Zapory sieciowe (firewall) i sterowanie ruchem sieciowym                                                      | 04.05.2020 |
+   | 10. | Konfiguracja i zarządzanie serwerami DHCP i DNS                                          | 11.05.2020 |
+   | 11. | Konfiguracja i zarządzanie serwerem plików (NFS, Samba, FTP)                                                   | 18.05.2020 |
+   | 12. | Konfiguracja i zarządzanie serwerem WWW. Systemy zarządzania treścią (CMS)                                      | 25.05.2020 |
+   | 13. | Konfigurowanie i uruchamianie maszyn wirtualnych w systemach Linux. Zabezpieczanie serwera. Zdalne administrowanie systemem                        | 01.06.2020 |
    
 1. Zaliczenie:
    *  dwa kolokwia obejmujące tematykę z dotychczas przeprowadzonych zajęć, każde za 10 punktów
