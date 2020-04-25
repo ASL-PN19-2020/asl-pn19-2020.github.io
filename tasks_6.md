@@ -33,7 +33,7 @@ Zarządzanie połączeniami sieciowymi. Routing
 
 1. Zapoznanie się ze środowiskiem
 
-   > Maszyny przygotowane do pracy w tym laboratorium zostały skonfigurowane w następujący sposób: każda maszyna ma zawsze adres IP hosta w postaci 10X, czyli maszyna VM1 ma adres hosta 101, VM2 -- 102, itd.. Adres IP sieci wskazuje które maszyny łączy: sieć między VM1 i VM2 ma adres 10.1.2.0/24, VM2 i VM3 -- 10.2.3.0/24 itd.. Przedostatnia cyfra adresu MAC interfejsu sieciowego wskazuje na numer maszyny, zaś ostatnia -- z którą maszyną się łączy, np. karta sieciowa maszyny VM1 ma adres `52:54:00:00:00:12`.
+   > Maszyny przygotowane do pracy w tym laboratorium zostały skonfigurowane w następujący sposób: każda maszyna ma zawsze adres IP hosta w postaci 10X, czyli maszyna VM1 ma adres hosta 101, VM2 - -102, itd.. Adres IP sieci wskazuje które maszyny łączy: sieć między VM1 i VM2 ma adres 10.1.2.0/24, VM2 i VM3 - 10.2.3.0/24 itd.. Przedostatnia cyfra adresu MAC interfejsu sieciowego wskazuje na numer maszyny, zaś ostatnia - z którą maszyną się łączy, np. karta sieciowa maszyny VM1 ma adres `52:54:00:00:00:12`.
 
    a. W każdej z maszyn uruchom polecenie `ip ad`. Zobacz jakie interfejsy sieciowe (karty sieciowe) w niej zainstalowano.
 
