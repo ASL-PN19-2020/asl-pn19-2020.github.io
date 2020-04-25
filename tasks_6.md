@@ -63,6 +63,45 @@ Zarządzanie połączeniami sieciowymi. Routing
 
       > Maszyny VM2 i VM3 pełnią funkcję routerów, więc wysyłają pakiety tylko do sieci o których coś wiedzą (z tabeli routingu). Maszyny VM1 i VM4 pełnią funkcję komputerów osobistych, więc wszystkie dane do innych sieci wysyłają do najbliższego routera (bramy domyślnej lub *Default Gateway*)
 
+2. Konfiguracja routingu
+
+   a. Przed rozpoczęciem konfiguracji tras routingu sprawdź czy w maszynach VM2 i VM3 jest włączone przekazywanie pakietów między podsieciami (*packet forwarding*):
+
+      ```bash
+      cat /proc/sys/net/ipv4/ip_forward
+      ```
+
+   b. Wartość 1 oznacza że routing działa. Wyłączony routing można włączyć poleceniem:
+
+
+      ```bash
+      echo 1 > /proc/sys/net/ipv4/ip_forward
+      ```
+
+   c. Na maszynie VM1 wykonaj polecenia `ping 10.2.3.103` i `traceroute 10.2.3.103`. Porównaj efekt działania poleceń z punktem i. poprzedniego zadania. Znając tabele routingu na maszynach VM1, VM2, VM3 zastanów się jak daleko dotrze pakiet z VM1 i w którym momencie proces "się zatnie"?
+
+      > Podpowiedź: Czy maszyna VM3 wie jak trafić do sieci 10.1.2.0 w której znajduje?
+
+   d. Aby odpowiedź wróciła z powrotem do VM1 musimy maszynie VM3 wskazać gdzie znajduje się podsieć z maszyną VM1. Na maszynie VM3 wykonaj polecenie, zastępując oznaczenia literowe poprawnymi adresami sieci:
+
+      ```bash
+      ip route add A.B.C.D/E via J.K.L.M
+      ```
+
+      > `A.B.C.D/E` to adres IP sieci w której jest maszyna VM1
+
+      > `J.K.L.M` to adres IP maszyny podłączonej bezpośrednio do VM3, która przekaże pakiety do podsieci `A.B.C.D/E`.
+
+   e. Wykonaj polecenie `ip route`, `ping 10.1.2.101` oraz `traceroute 10.1.2.101` na maszynie VM3, aby sprawdzić czy udało Ci się dodać trasę. **Zamieść zrzut ekranu w raporcie**.
+
+      > Jeśli nie udało ci się połączyć z maszyną VM1, skasuj dopisaną trasę poleceniem `ip route del A.B.C.D/E` i wróć do punktu d.
+
+   f. Na maszynie VM1 przetestuj połączenie z VM3 używając poleceń `ping` i `traceroute`. **Zamieść zrzut ekranu w raporcie**.
+
+   g. Analogicznie jak poprzednio, na maszynie VM2 skonfiguruj trasę routingu do podsieci z maszyną VM4. Przetestuj połączenie i **zamieść zrzuty ekranu testów w raporcie**.
+
+   e. Jeżeli wszystko do tej pory działało poprawnie to przetestuj połączenie VM1 i VM4 wykonując na maszynie VM1 polecenia: `ping 10.3.4.104` i `traceroute 10.3.4.104`. **Zamieść zrzut ekranu w raporcie**.
+
 ## Literatura:
  * slajdy z wykładu nr 8
  * [tutorial iptables](https://www.hostinger.com/tutorials/iptables-tutorial)
