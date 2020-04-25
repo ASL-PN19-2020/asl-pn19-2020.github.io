@@ -15,7 +15,7 @@ Zarządzanie połączeniami sieciowymi. Routing
 
    * Wybierz wersję skryptu przeznaczoną dla twojego systemu (Linux: `cook-vms.sh`, Windows `cook-vms.cmd`)
 
-   * W aplikacji zarządzającej (Oracle VirtualBox lub Hyper-V Manager) powinny pojawić się cztery maszyny wirtualne VM1-VM4.
+   * W aplikacji zarządzającej (Oracle VirtualBox) powinny pojawić się cztery maszyny wirtualne VM1-VM4.
 
    * Jeżeli w trakcie laboratorium coś pójdzie nie tak, ponowne uruchomienie `cook-vms` spowoduje skasowanie i utworzenie wszystkich maszyn na nowo.
 
