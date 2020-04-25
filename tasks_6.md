@@ -45,7 +45,7 @@ Zarządzanie połączeniami sieciowymi. Routing
 
    d. Wykonaj polecenia `ping 10.1.2.101` i `ping 10.2.3.103` aby sprawdzić czy maszyna VM2 ma połączenie z maszynami VM1 i VM3.
 
-     > Polecenie `ping` wysyła pakiet do komputera docelowego, a usługa działająca na komputerze docelowym odbiera go i odsyła odpowiedź do nadawcy. 
+     > Polecenie `ping` wysyła pakiet do komputera docelowego, a usługa działająca na komputerze docelowym odbiera go i odsyła odpowiedź do nadawcy. Liczbę prób można ograniczyć przy pomocy parametru `-c` (`ping -c 4 google.com`).
 
    e. Wykonaj polecenie `traceroute 10.1.2.101` aby zobaczyć którędy jest wędruje pakiet z maszyny VM2 do VM1.
 
@@ -101,6 +101,42 @@ Zarządzanie połączeniami sieciowymi. Routing
    g. Analogicznie jak poprzednio, na maszynie VM2 skonfiguruj trasę routingu do podsieci z maszyną VM4. Przetestuj połączenie i **zamieść zrzuty ekranu testów w raporcie**.
 
    e. Jeżeli wszystko do tej pory działało poprawnie to przetestuj połączenie VM1 i VM4 wykonując na maszynie VM1 polecenia: `ping 10.3.4.104` i `traceroute 10.3.4.104`. **Zamieść zrzut ekranu w raporcie**.
+
+3. Konfiguracja interfejsów sieciowych
+
+   > Konfiguracja interfejsów sieciowych w systemie Debian jest przechowywana w pliku `/etc/network/interfaces`. Aby ułatwić dodawanie i usuwanie konfiguracji utworzono również katalog `/etc/network/interfaces.d/`, z którego pliki są dołączane do wspominanego pliku `interfaces`.
+
+   a. Na maszynie VM1 wyłącz interfejs sieciowy: `ifdown eth0`.
+
+   b. Otwórz w edytorze plik `/etc/network/interfaces.d/40-network-cfg`
+
+   c. Zmień adres IP maszyny na 10.1.2.105/24
+
+   d. Zapisz plik i włącz interfejs sieciowy: `ifup eth0`.
+
+   e. Sprawdź czy masz kontakt z maszynami VM2, VM3 i VM4. Na maszynie VM4 wykonaj polecenie `ping 10.1.2.105` aby potwierdzić poprawność konfiguracji. **Zamieść zrzut ekranu w raporcie**.
+
+   > Konfiguracja routingu zwykle odbywa się automatycznie. Gdy jest jednak potrzebna stała konfiguracja trasy, to w systemie Debian dopisuje się ją w pliku konfiguracyjnym karty sieciowej.
+
+   f. Na maszynie VM3 wyłącz interfejs sieciowy eth0: `ifdown eth0`.
+
+   g. W pliku `/etc/network/interfaces.d/40-network-cfg` dopisz w sekcji `eth0` linijki:
+
+      ```
+      up route add -net A.B.C.D netmask F.G.H.I gw J.K.L.M
+      down route del -net A.B.C.D netmask F.G.H.I gw J.K.L.M
+      ```
+
+      Oznaczenia literowe zastąp adresami użytymi w sekcji 2d., kierującymi ruch do podsieci 10.1.2.0 przez interfejs eth1 maszyny VM2.
+
+      > Zwróć uwagę, że zamiast notacji CIDR: `10.0.0.0/24` komendy `route add/del` wykorzystują tradycyjną notację: `10.0.0.0 netmask 255.255.255.0`.
+
+   h. Włącz interfejs sieciowy `ifup eth0` i sprawdź czy możesz połączyć się z maszyną VM1. **Zamieść zrzut ekranu w raporcie.**
+
+   i. Zrestartuj maszynę VM3 poleceniem `reboot`, sprawdź czy po restarcie trasa routingu do podsieci 1-2 jest dostępna i czy możesz skontaktować się z maszyną VM1. 
+
+   j. Wprowadź analogiczną zmianę na maszynie VM2. Uwaga: zwróć uwagę na nieco inny układ interfejsów na maszynie. **Zamieść zrzut ekranu zawartości zmodyfikowanego pliku w raporcie.**
+
 
 ## Literatura:
  * slajdy z wykładu nr 8
