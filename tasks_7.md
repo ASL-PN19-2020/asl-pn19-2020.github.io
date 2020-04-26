@@ -5,7 +5,7 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 
 > Zadanie 1. wykonaj wykorzystując maszyny wirtualne z poprzedniej listy (routing). Pozostałe wykonaj używając Twojej maszyny wirtualnej ze środowiskiem graficznym. Niezalecane jest wykonywanie ćwiczeń dotyczących firewalla w systemie, z którego korzystasz na codzień.
 
-> Skonfiguruj sieć swojej maszyny wirtualnej by móc połączyć się z nią z poziomu hosta. W tym celu w ustawieniach maszyny wybierz *Sieć*/*Network* i skonfiguruj *Adapter 2* w tryb *Bridge*, wybierając jako nazwę połączenie kablowe.
+> Skonfiguruj sieć swojej maszyny wirtualnej by móc połączyć się z nią z poziomu hosta. W tym celu w ustawieniach maszyny wybierz *Sieć*/*Network* i skonfiguruj *Adapter 1* w tryb *Bridge*, wybierając jako nazwę Twoje połączenie sieciowe.
 
   ![bridge-vm.png](images/bridge-vm.png)
 
