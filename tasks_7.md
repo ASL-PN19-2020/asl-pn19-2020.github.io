@@ -15,6 +15,8 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 > ![create-net.png](images/net-dhcp.png)
 > * W ustawieniach Twojej maszyny wirtualnej dodaj adapter w polu *Network* -> *Adapter 2*, jak na zrzucie ekranu:
 > ![create-net.png](images/vm-net.png)
+> * Sprawdź czy sieć dostępna jest w maszynie poleceniem `ip ad`. Zapisz jej adres (uwaga: adres może być inny niż na zrzucie ekranu).
+> ![create-net.png](images/net-in-vm.png)
 
 1. **`iptables`**
    -  `iptables` powinien być już zainstalowany - gdyby nie był zainstaluj go poleceniem:
