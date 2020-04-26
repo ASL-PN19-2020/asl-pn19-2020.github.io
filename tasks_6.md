@@ -67,14 +67,14 @@ Zarządzanie połączeniami sieciowymi. Routing
 
    a. Przed rozpoczęciem konfiguracji tras routingu sprawdź czy w maszynach VM2 i VM3 jest włączone przekazywanie pakietów między podsieciami (*packet forwarding*):
 
-      ```bash
+      ```console
       cat /proc/sys/net/ipv4/ip_forward
       ```
 
    b. Wartość 1 oznacza że routing działa. Wyłączony routing można włączyć poleceniem:
 
 
-      ```bash
+      ```console
       echo 1 > /proc/sys/net/ipv4/ip_forward
       ```
 
@@ -84,7 +84,7 @@ Zarządzanie połączeniami sieciowymi. Routing
 
    d. Aby odpowiedź wróciła z powrotem do VM1 musimy maszynie VM3 wskazać gdzie znajduje się podsieć z maszyną VM1. Na maszynie VM3 wykonaj polecenie, zastępując oznaczenia literowe poprawnymi adresami sieci:
 
-      ```bash
+      ```console
       ip route add A.B.C.D/E via J.K.L.M
       ```
 
