@@ -5,9 +5,16 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 
 > Zadanie 1. wykonaj wykorzystując maszyny wirtualne z poprzedniej listy (routing). Pozostałe wykonaj używając Twojej maszyny wirtualnej ze środowiskiem graficznym. Niezalecane jest wykonywanie ćwiczeń dotyczących firewalla w systemie, z którego korzystasz na codzień.
 
-> Skonfiguruj sieć swojej maszyny wirtualnej by móc połączyć się z nią z poziomu hosta. W tym celu w ustawieniach maszyny wybierz *Sieć*/*Network* i skonfiguruj *Adapter 1* w tryb *Bridge*, wybierając jako nazwę Twoje połączenie sieciowe.
-
-  ![bridge-vm.png](images/bridge-vm.png)
+> Skonfiguruj sieć swojej maszyny wirtualnej by móc połączyć się z nią z poziomu hosta. W tym celu w VirtualBox dodaj sieć:
+> * W głównym oknie programu wybierz *Tools*, a z menu wybierz *Network*
+> * Utwórz nową sieć wybierając *Create*: 
+> ![create-net.png](images/create-net.png)
+> * Zmień jej ustawienia wybierając properties:
+> * Ustawienia Adaptera oraz serwera DHCP ustaw jak na poniższych zrzutach ekranu. Za każdym razem kliknij *Apply*: 
+> ![create-net.png](images/net-adapter.png) 
+> ![create-net.png](images/net-dhcp.png)
+> * W ustawieniach Twojej maszyny wirtualnej dodaj adapter w polu *Network* -> *Adapter 2*, jak na zrzucie ekranu:
+> ![create-net.png](images/vm-net.png)
 
 1. **`iptables`**
    -  `iptables` powinien być już zainstalowany - gdyby nie był zainstaluj go poleceniem:
@@ -159,15 +166,14 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
       ```
 
    Sprawdź również tutorial `ufw` z literatury.
+   
+   a. Uruchom maszynę wirtualną i sprawdź jej adres IP w sieci bridge. Możesz wykorzystać polecenie `ip ad`.
 
-   a. Aktywuj `ufw`. Sprawdź jego status. **Umieść zrzut ekranu w raporcie.**
-
-   b. Sprawdź, czy możesz połączyć się ze swoją maszyną z jej poziomu używając ssh. Wykonaj polecenie `ssh 127.0.0.1`.
-
+   b. Aktywuj `ufw`. Sprawdź jego status. **Umieść zrzut ekranu w raporcie.**
    c. Wykonaj polecenie:
 
    ```console
-   # ufw deny from 127.0.0.1 to 127.0.0.1 port 22 proto ssh
+   # ufw allow to 127.0.0.1 port 631 proto tcp
    ```
    
    > 
