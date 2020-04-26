@@ -201,9 +201,28 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
       # apt-get purge ufw
       ```
 
-3. **`firewalld`** i **`firewall-applet`**
+3. **`firewalld`** i **`firewall-applet`** - konfiguracja firewalla w GUI
 
-   a. 
+   -  Zainstaluj `firewall-applet` poleceniem:
+
+      ```console
+      # apt-get update
+      # apt-get install firewall-applet firewalld
+      ```
+
+   a. Uruchom `firewall-applet`. Zmieniając typ strefy dla aktywnego połączenia sprawdź, od którego poziomu możliwe jest połączenie przez SSH.
+
+   b. Zmień typ strefy dla aktywnego połączenia na *home* i spróbuj połączyć się z maszyną wirtualną przez ssh.
+
+   c. Dezaktywuj *Service* ssh dla aktualnej strefy. Sprawdź czy możliwe jest teraz połączenie przez ssh. **Umieść zrzut ekranu z nieudanego połączenia w raporcie.**
+
+   d. Na hoście spróbuj wykonać ping maszyny wirtualnej. Następnie w firewall-applet, w zakładce *Zones* przejdź do zakładki *ICMP Filter* dla aktualnego typu strefy. Zaznacz tam *echo-request* by uniemożliwić pingowanie tej maszyny. Wykonaj zrzut ekranu zmienionej konfiguracji i umieść w raporcie.** Sprawdź, jak zachowuje się maszyna przy pingowaniu po tej zmianie.
+
+   e. Odinstaluj `firewalld` oraz `firewall-applet` wraz z konfiguracją.
+
+      ```console
+      # apt-get purge firewall-applet firewalld
+      ```
 
 ## Literatura:
  * **`man`**: 
