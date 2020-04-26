@@ -8,7 +8,7 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 1. **`iptables`**
    -  `iptables` powinien być już zainstalowany - gdyby nie był zainstaluj go poleceniem:
 
-      ```bash
+      ```console
       # apt-get update
       # apt-get install iptables
       ```
@@ -39,37 +39,37 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 
       * dodawanie reguły:
 
-        ```bash
+        ```console
         # iptables -A <chain> -i <interface> -p <protocol> -s <source> -dport <port> -j <target>
         ```
 
       * usuwanie reguły - zastąp `-A` przez `-D`
 
-        ```bash
+        ```console
         # iptables -D <chain> -i <interface> -p <protocol> -s <source> -dport <port> -j <target>
         ```
 
       * usuwanie wszystkich reguł
 
-        ```bash
+        ```console
         # iptables -F
         ```
 
       * usuwanie wszystkich reguł w chainie
 
-        ```bash
+        ```console
         # iptables -F <chain>
         ```
 
       * listowanie reguł
 
-        ```bash
+        ```console
         # iptables -L --line-numbers
         ```
 
         na tej podstawie można również usuwać reguły
 
-        ```bash
+        ```console
         # iptables -D <chain> <number>
         ```
 
@@ -77,7 +77,7 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 
    a.  Sprawdź status `iptables`:
 
-      ```bash
+      ```console
       # iptables -L -v
       ```
 
