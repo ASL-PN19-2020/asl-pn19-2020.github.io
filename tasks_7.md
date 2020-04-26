@@ -3,7 +3,7 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 
 ## Zadania:
 
-> Zadania 1. i 2. wykonaj wykorzystując maszyny wirtualne z poprzedniej listy (routing). Pozostałe wykonaj używając Twojej maszyny wirtualnej ze środowiskiem graficznym. Niezalecane jest wykonywanie ćwiczeń dotyczących firewalla w systemie, z którego korzystasz na codzień.
+> Zadanie 1. wykonaj wykorzystując maszyny wirtualne z poprzedniej listy (routing). Pozostałe wykonaj używając Twojej maszyny wirtualnej ze środowiskiem graficznym. Niezalecane jest wykonywanie ćwiczeń dotyczących firewalla w systemie, z którego korzystasz na codzień.
 
 1. **`iptables`**
    -  `iptables` powinien być już zainstalowany - gdyby nie był zainstaluj go poleceniem:
@@ -109,17 +109,56 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 
       - Zablokuj pingowanie i ssh z maszyny VM2. **Załącz zrzuty ekranów z prób pingowania i połączenia ssh z VM2 na VM3.**
 
+      - Sprawdź, czy nadal możliwe jest pingowanie maszyny VM4 z VM1.
        
 
-2. **`ufw`**
+2. **`ufw`** i **`gufw`**
+   
+   -  Zainstaluj `ufw` i `gufw` poleceniem:
+
+      ```console
+      # apt-get update
+      # apt-get install ufw gufw
+      ```
+
+   Główne komendy `ufw`:
+
+   * aktywowanie ufw:
+
+      ```console
+      # ufw enable
+      ```
+
+   * deaktywowanie ufw:
+
+      ```console
+      # ufw disable
+      ```
+
+   * ponowne załadowanie reguł ufw:
+
+      ```console
+      # ufw reload
+      ```
+
+   * status ufw:
+
+      ```console
+      # ufw status
+      ```
+
+   * usuwanie reguł ufw:
+
+      ```console
+      # ufw status numbered
+      # ufw delete NUMBER
+      ```
+
+   Sprawdź również tutorial `ufw` z literatury.
 
    a. 
 
 3. **`firewalld`** i **`firewall-applet`**
-
-   a. 
-
-4. **`gufw`**
 
    a. 
 
@@ -130,3 +169,4 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
    *  
  * slajdy z wykładu nr 9
  * [tutorial iptables](https://www.hostinger.com/tutorials/iptables-tutorial)
+ * [tutorial ufw](https://help.ubuntu.com/community/UFW)
