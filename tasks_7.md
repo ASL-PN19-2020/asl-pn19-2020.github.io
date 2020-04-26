@@ -100,29 +100,29 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
       # iptables -L -v
       ```
 
-   b. Załóżmy, że chcielibyśmy ukryć przed maszyną VM4 router VM3, tzn. uniemożliwić pingowanie jego adresu oraz połączenie z nim przez `ssh`.
+      > Załóżmy, że chcielibyśmy ukryć przed maszyną VM4 router VM3, tzn. uniemożliwić pingowanie jego adresu oraz połączenie z nim przez `ssh`.
 
-      - Na maszynie VM4 sprawdź połączenie z maszyną VM3 (`ping 10.3.4.103`) oraz spróbuj połączyć się używając [SSH](https://pl.wikipedia.org/wiki/Secure_Shell) (`ssh 10.3.4.103`).
+   b. Na maszynie VM4 sprawdź połączenie z maszyną VM3 (`ping 10.3.4.103`) oraz spróbuj połączyć się używając [SSH](https://pl.wikipedia.org/wiki/Secure_Shell) (`ssh 10.3.4.103`).
 
-        > na pytanie "*Are you sure you want to continue connecting (yes/no)*" wpisz `yes`. Aby wyjść z Secure Shell należy wpisać `exit` lub wykorzystać skrót klawiszowy `Ctrl+D`.
+   c. na pytanie "*Are you sure you want to continue connecting (yes/no)*" wpisz `yes`. Aby wyjść z Secure Shell należy wpisać `exit` lub wykorzystać skrót klawiszowy `Ctrl+D`.
 
-        > Pamiętaj o tym, że w zależności od sieci poszczególne maszyny mają inne adresy.
+      > Pamiętaj o tym, że w zależności od sieci poszczególne maszyny mają inne adresy.
 
-      - Zablokuj możliwość pingowania VM3 przez VM4; na maszynie VM3 wpisz komendę:
+   d. Zablokuj możliwość pingowania VM3 przez VM4; na maszynie VM3 wpisz komendę:
 
-        ```console
-        # iptables -I INPUT -p icmp -j DROP -i eth1
-        ```
+      ```console
+      # iptables -I INPUT -p icmp -j DROP -i eth1
+      ```
 
-        > w ten sposób blokowany jest połączenie na interfejsie `eth1` (połączenie VM3 i VM4) dla protokołu `icmp` wykorzystywanego przez ping
+      > w ten sposób blokowany jest połączenie na interfejsie `eth1` (połączenie VM3 i VM4) dla protokołu `icmp` wykorzystywanego przez ping
 
-      - Sprawdź możliwość pingowania VM3 z maszyn VM2 i VM4 (pierwsze powinno nadal działać, drugie - nie). **Umieść w raporcie zrzut ekranu z wywołania odpowiednich poleceń**
+   e. Sprawdź możliwość pingowania VM3 z maszyn VM2 i VM4 (pierwsze powinno nadal działać, drugie - nie). **Umieść w raporcie zrzut ekranu z wywołania odpowiednich poleceń**
 
-      - Zablokuj możliwość połączenia przez `ssh` z VM4 na VM3 (analogicznie do powyższych kroków - protokół `ssh`). **W raporcie umieść zrzuty ekranów z próby połączenia przez ssh z VM3.**
+   f. Zablokuj możliwość połączenia przez `ssh` z VM4 na VM3 (analogicznie do powyższych kroków - protokół `ssh`). **W raporcie umieść zrzuty ekranów z próby połączenia przez ssh z VM3.**
 
-      - Zablokuj pingowanie i ssh z maszyny VM2. **Załącz zrzuty ekranów z prób pingowania i połączenia ssh z VM2 na VM3.**
+   g. Zablokuj pingowanie i ssh z maszyny VM2. **Załącz zrzuty ekranów z prób pingowania i połączenia ssh z VM2 na VM3.**
 
-      - Sprawdź, czy nadal możliwe jest pingowanie maszyny VM4 z VM1.
+   h. Sprawdź, czy nadal możliwe jest pingowanie maszyny VM4 z VM1.
        
 
 2. **`ufw`**
