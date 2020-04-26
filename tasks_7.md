@@ -33,7 +33,7 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
       > * *DROP* - odrzucenie pakietu (przy połączeniu z systemem wygląda to tak, jakby system nie istniał)
       > * *REJECT* - odrzucenie pakietu (przy połączeniu pojawia się komunikat *connection reset* dla TCP lub *destination host unreachable* dla UDP lub ICMP)
 
-      ![firewall-pipeline.png](firewall-pipeline.png)
+      ![firewall-pipeline.png](images/firewall-pipeline.png)
 
    -  sprawdź status `iptables`:
 
