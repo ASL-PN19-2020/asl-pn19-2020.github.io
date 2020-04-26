@@ -125,13 +125,13 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
       - Sprawdź, czy nadal możliwe jest pingowanie maszyny VM4 z VM1.
        
 
-2. **`ufw`** i **`gufw`**
+2. **`ufw`**
    
-   -  Zainstaluj `ufw` i `gufw` poleceniem:
+   -  Zainstaluj `ufw` poleceniem:
 
       ```console
       # apt-get update
-      # apt-get install ufw gufw
+      # apt-get install ufw
       ```
 
    Główne komendy `ufw`:
@@ -171,14 +171,35 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
    
    a. Uruchom maszynę wirtualną i sprawdź jej adres IP w sieci bridge. Możesz wykorzystać polecenie `ip ad`.
 
-   b. Aktywuj `ufw`. Sprawdź jego status. **Umieść zrzut ekranu w raporcie.**
-   c. Wykonaj polecenie:
+   b. Połącz się z poziomu hosta z maszyną wirtualną (`ssh ADRES_IP`). **Umieść zrzut ekranu z udanego połączenia w raporcie**.
 
-   ```console
-   # ufw allow to 127.0.0.1 port 631 proto tcp
-   ```
-   
-   > 
+   c. Aktywuj `ufw`. Sprawdź jego status. **Umieść zrzut ekranu w raporcie.**
+
+   d. Spróbuj ponownie połączyć się z maszyną wirtualną z poziomu hosta.
+
+   e. Aby umożliwić połączenie z maszyną należy dodać regułę, która zezwoli na połączenie przez port 22:
+
+      ```console
+      # ufw allow from A.B.C.D/E to any port 22
+      ```
+
+      gdzie A.B.C.D to adres IP skonfigurowanej na początku sieci
+
+   f. Spróbuj ponownie połączyć się z maszyną. **Pokaż zrzut ekranu udanego połączenia oraz listę reguł ufw w raporcie.**
+
+   g. Zablokuj połączenia http i https dwukrotnie wypełniając odpowiednio poniższą komendę.
+
+      ```console
+      # ufw deny out PORT_NUMBER
+      ```
+
+      Sprawdź czy reguły zostały dodane do ufw wyświetlając listę reguł. **Umieść zrzut ekranu w raporcie.**
+
+   h. Dezaktywuj firewall i usuń `ufw` poleceniem
+ 
+      ```console
+      # apt-get purge ufw
+      ```
 
 3. **`firewalld`** i **`firewall-applet`**
 
