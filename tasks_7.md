@@ -35,25 +35,65 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 
       ![firewall-pipeline.png](images/firewall-pipeline.png)
 
-   -  sprawdź status `iptables`:
+      Główne komendy `iptables`:
+
+      * dodawanie reguły:
+
+        ```bash
+        # iptables -A <chain> -i <interface> -p <protocol> -s <source> -dport <port> -j <target>
+        ```
+
+      * usuwanie reguły - zastąp `-A` przez `-D`
+
+        ```bash
+        # iptables -D <chain> -i <interface> -p <protocol> -s <source> -dport <port> -j <target>
+        ```
+
+      * usuwanie wszystkich reguł
+
+        ```bash
+        # iptables -F
+        ```
+
+      * usuwanie wszystkich reguł w chainie
+
+        ```bash
+        # iptables -F <chain>
+        ```
+
+      * listowanie reguł
+
+        ```bash
+        # iptables -L --line-numbers
+        ```
+
+        na tej podstawie można również usuwać reguły
+
+        ```bash
+        # iptables -D <chain> <number>
+        ```
+
+      Inne reguły można znaleźć w tutorialu (sprawdź literaturę).
+
+   a.  Sprawdź status `iptables`:
 
       ```bash
       # iptables -L -v
       ```
 
-   -  
+   b.  Załóżmy, że chcielibyśmy ukryć przed innymi maszynami router VM3, tzn. uniemożliwić 
 
 2. **`ufw`**
 
-
+   a. 
 
 3. **`firewalld`** i **`firewall-applet`**
 
-
+   a. 
 
 4. **`gufw`**
 
-
+   a. 
 
 ## Literatura:
  * **`man`**: 
