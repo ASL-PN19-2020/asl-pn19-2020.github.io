@@ -28,5 +28,6 @@ Konsultacje: pok. 441 / bud. A1 (poniedziałki 15.30 - 16.30). **Proszę o wcze�
 3. 30.03.2020: [Zarządzanie dyskami i systemem plikowym](tasks_3.md)
 4. 06.04.2020: [Przeprowadzanie kompresji danych. Wykonywanie kopii zapasowej i odzyskiwanie danych. Harmonogramowanie operacji](tasks_4.md)
 5. 20.04.2020: [Aktualizacja systemu, instalacja, aktualizacja i deinstalacja dodatkowego oprogramowania z wykorzystaniem pakietów instalacyjnych i repozytoriów oprogramowania. Konfigurowanie drukowania w środowisku Linux. Środowisko graficzne - X Window](tasks_5.md)
+6. 27.04.2020: [Zarządzanie połączeniami sieciowymi. Routing](tasks_6.md)
 
 
