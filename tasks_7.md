@@ -3,28 +3,9 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
 
 ## Zadania:
 
-> Zadanie 1. wykonaj wykorzystując maszyny wirtualne z poprzedniej listy (routing). Pozostałe wykonaj używając Twojej maszyny wirtualnej ze środowiskiem graficznym. Niezalecane jest wykonywanie ćwiczeń dotyczących firewalla w systemie, z którego korzystasz na codzień.
-
-> Skonfiguruj sieć swojej maszyny wirtualnej by móc połączyć się z nią z poziomu hosta. W tym celu w VirtualBox dodaj sieć:
-> * W głównym oknie programu wybierz *Tools*, a z menu wybierz *Network*
-> * Utwórz nową sieć wybierając *Create*: 
-> ![create-net.png](images/create-net.png)
-> * Zmień jej ustawienia wybierając properties:
-> * Ustawienia Adaptera oraz serwera DHCP ustaw jak na poniższych zrzutach ekranu. Za każdym razem kliknij *Apply*: 
-> ![create-net.png](images/net-adapter.png) 
-> ![create-net.png](images/net-dhcp.png)
-> * W ustawieniach Twojej maszyny wirtualnej dodaj adapter w polu *Network* -> *Adapter 2*, jak na zrzucie ekranu:
-> ![create-net.png](images/vm-net.png)
-> * Sprawdź czy sieć dostępna jest w maszynie poleceniem `ip ad`. Zapisz jej adres (uwaga: adres może być inny niż na zrzucie ekranu).
-> ![create-net.png](images/net-in-vm.png)
+> Zadanie 1. wykonaj wykorzystując maszyny wirtualne z poprzedniej listy (routing).
 
 1. **`iptables`**
-   -  `iptables` powinien być już zainstalowany - gdyby nie był zainstaluj go poleceniem:
-
-      ```console
-      # apt-get update
-      # apt-get install iptables
-      ```
 
       > `iptables` składa się z tablic (*tables*), reguł (*chains*) oraz operacji na pakiecie (*targets*).
 
@@ -123,7 +104,22 @@ Zapory sieciowe (firewall) i sterowanie ruchem sieciowym
    g. Zablokuj pingowanie i ssh z maszyny VM2. **Załącz zrzuty ekranów z prób pingowania i połączenia ssh z VM2 na VM3.**
 
    h. Sprawdź, czy nadal możliwe jest pingowanie maszyny VM4 z VM1.
-       
+
+> Pozostałe wykonaj używając Twojej maszyny wirtualnej ze środowiskiem graficznym. Niezalecane jest wykonywanie ćwiczeń dotyczących firewalla w systemie, z którego korzystasz na codzień.
+
+> Skonfiguruj sieć swojej maszyny wirtualnej by móc połączyć się z nią z poziomu hosta. W tym celu w VirtualBox dodaj sieć:
+> * W głównym oknie programu wybierz *Tools*, a z menu wybierz *Network*
+> * Utwórz nową sieć wybierając *Create*: 
+> ![create-net.png](images/create-net.png)
+> * Zmień jej ustawienia wybierając properties:
+> * Ustawienia Adaptera oraz serwera DHCP ustaw jak na poniższych zrzutach ekranu. Za każdym razem kliknij *Apply*: 
+> ![create-net.png](images/net-adapter.png) 
+> ![create-net.png](images/net-dhcp.png)
+> * W ustawieniach Twojej maszyny wirtualnej dodaj adapter w polu *Network* -> *Adapter 2*, jak na zrzucie ekranu:
+> ![create-net.png](images/vm-net.png)
+> * Sprawdź czy sieć dostępna jest w maszynie poleceniem `ip ad`. Zapisz jej adres (uwaga: adres może być inny niż na zrzucie ekranu).
+> ![create-net.png](images/net-in-vm.png)
+   
 
 2. **`ufw`**
    
