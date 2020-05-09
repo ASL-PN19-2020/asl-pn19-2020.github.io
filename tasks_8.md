@@ -65,7 +65,7 @@ Konfiguracja i zarządzanie serwerami DHCP i DNS
 
          Wpis `NS` definiuje adres serwera DNS dla strefy. Wpis `A` definiuje adres IP hosta o podanej nazwie. Wpis `CNAME` definiuje alias (dodatkową nazwę) dla istniejącego hosta. Zamień `A.B.C.D` i `A.B.C.E` na adresy IP maszyn VM2 i VM1. **Umieść zrzut ekranu z utworzonego pliku w raporcie.**
 
-      *  Zmodyfikuj ustawienia serwera bind `/etc/bind.named.conf.options`. Na początku pliku dodaj sekcję *acl*, w której zdefiniujemy z jakich podsieci mogą pochodzić zapytania, na które odpowiada nasz serwer DNS (`A.B.C.F/G` to adres i maska podsieci, w której znajdują się maszyny VM1 i VM2):
+      *  Zmodyfikuj ustawienia serwera bind `/etc/bind/named.conf.options`. Na początku pliku dodaj sekcję *acl*, w której zdefiniujemy z jakich podsieci mogą pochodzić zapytania, na które odpowiada nasz serwer DNS (`A.B.C.F/G` to adres i maska podsieci, w której znajdują się maszyny VM1 i VM2):
 
          ```
          acl "trusted" {
