@@ -5,8 +5,7 @@ Konfiguracja i zarządzanie serwerami DHCP i DNS
 
 1. Zadania wykonywane będą przy pomocy maszyn VM1 i VM2 stworzonych podczas listy zadań dot. routingu.
 
-2. Dla przypomnienia: dane logowania to `debian`/`password`, uprawnienia podnosimy przy
-pomocy `sudo -i`.
+2. Dla przypomnienia: dane logowania to `debian`/`password`, uprawnienia podnosimy przy pomocy `sudo -i`.
 
 3. Aby przywrócić maszyny do stanu początkowego, uruchom skrypt `cook-vms`.
 
