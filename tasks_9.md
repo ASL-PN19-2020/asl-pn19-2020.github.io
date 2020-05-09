@@ -305,5 +305,5 @@ Konfiguracja i zarządzanie serwerem plików (NFS, Samba, FTP)
 ## Literatura:
 
  * `man`:
-   * 
+   * `ftp`, `sftp`
  * slajdy z wykładu nr 11
