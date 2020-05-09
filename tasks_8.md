@@ -39,6 +39,7 @@ Konfiguracja i zarządzanie serwerami DHCP i DNS
       
       ```console
       # apt update
+
       # apt install -y bind9 bind9utils bind9-doc dnsutils
       ```
 
@@ -99,10 +100,15 @@ Konfiguracja i zarządzanie serwerami DHCP i DNS
 
       ```console
       $ nslookup ns1.lsa2020.pl
+
       $ dig vm1.lsa2020.pl
+
       $ host vm2.lsa2020.pl
+
       $ ping vm1.lsa2020.pl
+
       $ ping vm2.lsa2020.pl
+
       $ ping www.lsa2020.pl
       ```
 
@@ -110,8 +116,9 @@ Konfiguracja i zarządzanie serwerami DHCP i DNS
    
    i. Jeżeli wszystkie polecenia zostały wykonane poprawnie, na maszynie VM1 powinna być możliwość zainstalowania `dnsutils`:
 
-      ```consoler
+      ```console
       # apt update
+
       # apt install dnsutils
       ```
    
@@ -125,6 +132,7 @@ Konfiguracja i zarządzanie serwerami DHCP i DNS
 
       ```console
       # apt update
+      
       # apt install –y isc-dhcp-server
       ```
 
