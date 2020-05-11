@@ -30,3 +30,4 @@ Konsultacje: pok. 441 / bud. A1 (poniedziałki 15.30 - 16.30). **Proszę o wcze�
 5. 20.04.2020: [Aktualizacja systemu, instalacja, aktualizacja i deinstalacja dodatkowego oprogramowania z wykorzystaniem pakietów instalacyjnych i repozytoriów oprogramowania. Konfigurowanie drukowania w środowisku Linux. Środowisko graficzne - X Window](tasks_5.md)
 6. 27.04.2020: [Zarządzanie połączeniami sieciowymi. Routing](tasks_6.md)
 7. 04.05.2020: [Zapory sieciowe (firewall) i sterowanie ruchem sieciowym](tasks_7.md)
+8. 11.05.2020: [Konfiguracja i zarządzanie serwerami DHCP i DNS](tasks_8.md)
