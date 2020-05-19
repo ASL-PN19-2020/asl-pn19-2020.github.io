@@ -91,7 +91,7 @@ Konfiguracja i zarządzanie serwerem plików (NFS, Samba, FTP)
       ```
 
       * `/nfs/export` - udostępniany katalog
-      * `A.B.C.D/E` - adres i maska podsieci pomiędzy maszynami VM1 i VM2
+      * `A.B.C.D/E` - adres i maska podsieci pomiędzy maszynami VM2 i VM3 (labnet)
       * `rw` - prawo odczytu i zapisu
       * `sync` - synchronizacja
       * `no_root_squash` - nadaje uprawnienia roota
