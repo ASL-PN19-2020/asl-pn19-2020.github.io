@@ -20,7 +20,7 @@ Konfiguracja i zarządzanie serwerem plików (NFS, Samba, FTP)
 4. Podaj obu maszynom sieć NAT (jej adres to `10.10.10.0/24`) oraz usuń nieużywane sieci:
 
    ```console
-   vboxmanage natnetwork add --netname labnet --network "10.10.10.0/24" --dhcp off --enable
+   vboxmanage natnetwork add --netname labnet --network "10.10.10.0/24" --dhcp on --enable
 
    vboxmanage modifyvm vm2 --nic1 none
 
