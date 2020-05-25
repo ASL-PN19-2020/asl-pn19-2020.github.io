@@ -32,3 +32,5 @@ Konsultacje: pok. 441 / bud. A1 (poniedziałki 15.30 - 16.30). **Proszę o wcze�
 7. 04.05.2020: [Zapory sieciowe (firewall) i sterowanie ruchem sieciowym](tasks_7.md)
 8. 11.05.2020: [Konfiguracja i zarządzanie serwerami DHCP i DNS](tasks_8.md)
 9. 18.05.2020: [Konfiguracja i zarządzanie serwerem plików (NFS, Samba, FTP)](tasks_9.md)
+10. 25.05.2020: [Konfiguracja i zarządzanie serwerm www. Systemy zarządzania treścią(CMS)](tasks_10.md)
+
