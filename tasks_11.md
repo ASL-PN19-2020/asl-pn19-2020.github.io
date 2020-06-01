@@ -151,7 +151,13 @@ na maszynie VM2 zidentyfikuj kartę sieciową podłączoną do Internetu, a nast
         $ startx
         ```
 
-        **Uwaga**: Jeśli maszyna nie chce aktualizować pakietów przez `apt update`, wyłącz tymczasowo firewall na maszynie VM2 (`ufw disable`) i włącz go po zakończeniu całej instalacji (`ufw enable`).
+        **Uwaga**: Jeśli maszyna nie chce aktualizować pakietów przez `apt update`, wyłącz tymczasowo firewall na maszynie VM2 (`ufw disable`) i wywołaj ponownie polecenie:
+        
+        ```console
+        # iptables -t nat -A POSTROUTING -o enp0s9 -j MASQUERADE
+        ```
+        
+        Po zakończeniu całej instalacji włącz ponownie firewall (`ufw enable`).
    
    c. W środowisku graficznym openbox na VM1 kliknij prawym klawiszem myszy i uruchom z menu opcję *Terminal emulator*, a następnie podłącz się do maszyny VM2:
 
